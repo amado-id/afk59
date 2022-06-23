@@ -1,0 +1,101 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php7.c>
+  php_flag session.use_trans_sid off
+  php_value display_errors 1
+  
+  php_value mbstring.func_overload 2
+  php_value mbstring.internal_encoding UTF-8
+  php_value max_input_vars 10000  
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+
+	RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+	RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]    
+    
+Redirect 301 /quality.php	https://afk59.ru/company/quality/
+Redirect 301 /o-kompanii/novosti/	https://afk59.ru/company/news/
+Redirect 301 /o-kompanii/otzyvy/	https://afk59.ru/company/reviews/
+Redirect 301 /o-kompanii/	https://afk59.ru/company/
+Redirect 301 /kontakty/	https://afk59.ru/contacts/
+Redirect 301 /produktsiya/krovelnye-sistemy/	https://afk59.ru/product/krovelnye-sistemy/
+Redirect 301 /produktsiya/metallocherepitsa/	https://afk59.ru/product/krovelnye-sistemy/metallocherepitsa/
+Redirect 301 /produktsiya/krovelnyy-profnastil/	https://afk59.ru/product/krovelnye-sistemy/krovelnyy-profnastil/
+Redirect 301 /produktsiya/gibkaya-cherepitsa/	https://afk59.ru/product/krovelnye-sistemy/gibkaya-cherepitsa/
+Redirect 301 /produktsiya/ondulin/	https://afk59.ru/product/krovelnye-sistemy/ondulin/
+Redirect 301 /produktsiya/elementy-otdelki-krovli/	https://afk59.ru/product/krovelnye-sistemy/elementy-otdelki-krovli/
+Redirect 301 /produktsiya/vodostochnye-sistemy/	https://afk59.ru/product/krovelnye-sistemy/vodostochnye-sistemy/
+Redirect 301 /produktsiya/elementy-bezopasnosti-krovli/	https://afk59.ru/product/krovelnye-sistemy/elementy-bezopasnosti-krovli/
+Redirect 301 /produktsiya/mansardnye-okna/	https://afk59.ru/product/krovelnye-sistemy/mansardnye-okna/
+Redirect 301 /produktsiya/podshiv-karniza/	https://afk59.ru/product/krovelnye-sistemy/podshiv-karniza/
+Redirect 301 /produktsiya/soputstvuyushchie-tovary_krovly/	https://afk59.ru/product/krovelnye-sistemy/soputstvuyushchie-tovary_krovly/
+Redirect 301 /produktsiya/naplavlyaemaya-krovlya/	https://afk59.ru/product/krovelnye-sistemy/naplavlyaemaya-krovlya/
+Redirect 301 /produktsiya/fasadnye-sistemy/	https://afk59.ru/product/fasadnye-sistemy/
+Redirect 301 /produktsiya/elementy-podkonstruktsii/	https://afk59.ru/product/fasadnye-sistemy/elementy-podkonstruktsii/
+Redirect 301 /produktsiya/profnastil-stenovoy/	https://afk59.ru/product/fasadnye-sistemy/profnastil-stenovoy/
+Redirect 301 /produktsiya/metallicheskiy-sayding/	https://afk59.ru/product/fasadnye-sistemy/metallicheskiy-sayding/
+Redirect 301 /produktsiya/vinilovyy-sayding/	https://afk59.ru/product/fasadnye-sistemy/vinilovyy-sayding/
+Redirect 301 /produktsiya/tsokolnyy-sayding/	https://afk59.ru/product/fasadnye-sistemy/tsokolnyy-sayding/
+Redirect 301 /produktsiya/fasadnye-kassety/	https://afk59.ru/product/fasadnye-sistemy/fasadnye-kassety/
+Redirect 301 /produktsiya/linearnye-paneli/	https://afk59.ru/product/fasadnye-sistemy/linearnye-paneli/
+Redirect 301 /produktsiya/kompozitnye-paneli/	https://afk59.ru/product/fasadnye-sistemy/kompozitnye-paneli/
+Redirect 301 /produktsiya/keramogranit/	https://afk59.ru/product/fasadnye-sistemy/keramogranit/
+Redirect 301 /produktsiya/fibrotsementnye-plity/	https://afk59.ru/product/fasadnye-sistemy/fibrotsementnye-plity/
+Redirect 301 /produktsiya/soputstvuyushchie-tovary_fasad/	https://afk59.ru/product/fasadnye-sistemy/soputstvuyushchie-tovary_fasad/
+Redirect 301 /produktsiya/profnastil/	https://afk59.ru/product/profnastil/
+Redirect 301 /produktsiya/sendvich-paneli/	https://afk59.ru/product/sendvich-paneli/
+Redirect 301 /produktsiya/sendvich-paneli-poelementnoy-sborki-sp-ps/	https://afk59.ru/product/sendvich-paneli/sendvich-paneli-poelementnoy-sborki-sp-ps/
+Redirect 301 /produktsiya/trekhsloynye-sendvich-paneli-tsp/	https://afk59.ru/product/sendvich-paneli/trekhsloynye-sendvich-paneli-tsp/
+Redirect 301 /produktsiya/soputstvuyushchie-tovary-dlya-sp-ps/	https://afk59.ru/product/sendvich-paneli/soputstvuyushchie-tovary-dlya-sp-ps/
+Redirect 301 /produktsiya/teploizolyatsiya/	https://afk59.ru/product/teploizolyatsiya/
+Redirect 301 /produktsiya/bazaltovaya-teploizolyatsiya/	https://afk59.ru/product/teploizolyatsiya/bazaltovaya-teploizolyatsiya/
+Redirect 301 /produktsiya/steklovolokno/	https://afk59.ru/product/teploizolyatsiya/steklovolokno/
+Redirect 301 /produktsiya/ekstrudirovannaya-teploizolyatsiya/	https://afk59.ru/product/teploizolyatsiya/ekstrudirovannaya-teploizolyatsiya/
+Redirect 301 /produktsiya/materialy-dlya-ustroystva-zabora/	https://afk59.ru/product/zabory/
+Redirect 301 /produktsiya/soputstvuyushchie-tovary/	https://afk59.ru/product/soputstvuyushchie-tovary/
+Redirect 301 /produktsiya/paro-gidro-vetroizolyaciya/	https://afk59.ru/product/soputstvuyushchie-tovary/paro-gidro-vetroizolyaciya/
+Redirect 301 /produktsiya/metizy/	https://afk59.ru/product/soputstvuyushchie-tovary/metizy/
+Redirect 301 /produktsiya/remontnaya-emal/	https://afk59.ru/product/soputstvuyushchie-tovary/remontnaya-emal/
+Redirect 301 /produktsiya/orientirovanno-struzhechnye-plity/	https://afk59.ru/product/soputstvuyushchie-tovary/orientirovanno-struzhechnye-plity/
+Redirect 301 /produktsiya/uplotniteli/	https://afk59.ru/product/soputstvuyushchie-tovary/uplotniteli/
+Redirect 301 /produktsiya/teplitsy-i-polikarbonat/	https://afk59.ru/product/polikarbonat/
+Redirect 301 /produktsiya/drenazhnaya-sistema/	https://afk59.ru/product/drenazhnaya-sistema/
+Redirect 301 /produktsiya/	https://afk59.ru/product/
+  
+Redirect 301 /projects/realizovannye-montazhnye-raboty/montazh-ograzhdayushchikh-konstruktsiy-dlya-torgovo-delovogo-tsentra/ https://ì.ru/projects/nashi-obekty/montazh-ograzhdayushchikh-konstruktsiy-dlya-torgovo-delovogo-tsentra/
+Redirect 301 /projects/realizovannye-montazhnye-raboty/ustroystvo-ventiliruemogo-fasada-s-utepleniem-i-oblitsovkoy-fibrotsementnymi-plitami-na-zhilykh-25-e/ https://afk59.ru/projects/nashi-obekty/ustroystvo-ventiliruemogo-fasada-s-utepleniem-i-oblitsovkoy-fibrotsementnymi-plitami-na-zhilykh-25-e/
+Redirect 301 /projects/realizovannye-montazhnye-raboty/stroitelstvo-proizvodstvennogo-tsekha/ https://afk59.ru/projects/nashi-obekty/stroitelstvo-proizvodstvennogo-tsekha/
+Redirect 301 /projects/realizovannye-montazhnye-raboty/montazh-ograzhdayushchikh-konstruktsiy-dlya-legkoatleticheskogo-manezha-sportivnogo-kompleksa-im-sukh/ https://afk59.ru/projects/nashi-obekty/montazh-ograzhdayushchikh-konstruktsiy-dlya-legkoatleticheskogo-manezha-sportivnogo-kompleksa-im-sukh/
+Redirect 301 /projects/realizovannye-montazhnye-raboty/remont-krovli-vodogryazelechebnitsy/ https://afk59.ru/projects/nashi-obekty/remont-krovli-vodogryazelechebnitsy/
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+
+

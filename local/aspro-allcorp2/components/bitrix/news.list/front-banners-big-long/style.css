@@ -1,0 +1,58 @@
+.banner-title {
+    font-weight: 300 !important;
+}
+.banners-big .slides .text .inner {
+    padding-left: 55px !important;
+}
+.banners-big .slides .text-block {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    font-size: 34px;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #787790;
+    line-height: 1.2;
+    letter-spacing: 3px;
+}
+.banners-big .slides .text-block span {
+    display: block;
+    color: #bebdd0;
+    font-size: 65px;
+    letter-spacing: normal;
+    padding-left: 55px;
+}
+.banners-big .btn.btn-default {
+    background: #5955e6;
+}
+.banners-big .btn.btn-new {
+    margin-top: 0;
+    margin-bottom: 40px;
+    background: transparent;
+    border: 1px solid #807cff !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 0;
+    line-height: 1;
+}
+.banners-big .flex-control-nav li a {
+    width: 6px;
+    height: 6px;
+    background: #817f8b;
+    box-shadow: none;
+}
+.banners-big .flex-control-paging li a:hover, .banners-big .flex-control-paging li a.flex-active {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+}
+.front.banners-big .flexslider .flex-control-nav {
+    text-align: left;
+    padding-left: calc((100vw - 1344px) / 2);
+}
+.flex-control-nav li {
+    margin: 0px 9px !important;
+}
